@@ -37,7 +37,7 @@ export const projects = [
     galleryLayout: "triptych",
     details: [
       "Designed and tested a Pneumatic Mandrel System to simulate spaceflight lateral trash pressure and aid NASA's development of Mechanical Trash Compactor. Determined optimal parameters for microgravity trash compaction.",
-      "Created technical engineering drawings with GD&T, worked with the machine shop for part manufacturing.",
+      "Created technical engineering drawings, familiarity with GD&T, worked with the machine shop for part manufacturing.",
       "Presenting as first author at the 2026 International Conference on Environmental Systems."
     ],
   //  github: "https://github.com/yourusername/project1",
