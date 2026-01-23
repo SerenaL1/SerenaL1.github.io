@@ -170,6 +170,6 @@ export const projects = [
 Implemented robust backend systems using Laravel and MySQL for reliable service delivery.
 
 Focused on user authentication, real-time tracking, and safety verification systems.`,
-    github: "https://github.com/yourusername/project3"
+    github: "Coming soon!"
   }
 ];
