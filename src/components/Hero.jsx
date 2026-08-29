@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Hi, I'm Serena Liu</h1>
         <p className="tagline">
-          Mechanical Engineering & Computer Science Student | Robotics & AI Enthusiast
+          Electrical Engineering & Computer Science Student | Robotics & AI Enthusiast
         </p>
         {/* <div className="hero-links">
           <a href="https://github.com/SerenaL1" target="_blank" rel="noopener noreferrer">

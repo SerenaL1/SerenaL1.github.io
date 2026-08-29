@@ -1,6 +1,78 @@
 export const projects = [
   {
     id: 1,
+    title: "Analysis and Evaluation of One-Step Generative Models",
+    company: "Kempner Institute for the Study of Natural and Artificial Intelligence",
+    companyUrl: "https://kempnerinstitute.harvard.edu/",
+   // description: "Fine-tuned a vision-language-action model and deployed to a robotic arm",
+    shortDesc: "AI Researcher",
+    technologies: ["Diffusion Models", "Flow Matching"],
+    images: ["/images/fairbench1.png", "/images/fairbench2.png", "/images/fairbench3.png"],
+    details: [
+  `Co-first authored an ECCV-submitted paper proposing a controlled benchmark comparing native 
+  one-step generative flow models (MeanFlow, iMF, SoFlow) against state-of-the-art multi-step 
+  diffusion and flow systems (e.g., Stable Diffusion 3.5, FLUX, Scale-RAE).`,
+
+  `Designed standardized inference protocols controlling classifier-free guidance (CFG) 
+  and sampling step count to enable fair cross-model comparison.`,
+
+  `Proposed a composite evaluation objective, MinMax Harmonic Mean (MMHM), integrating 
+  FID, Inception Score, CLIP Score, and PickScore to mitigate single-metric optimization bias.`,
+
+  `Conducted large-scale benchmarking experiments on ImageNet, ImageNetV2, and reLAIONet 
+  to analyze scaling behavior and qualitative failure modes of emerging one-step generators.`
+],
+    github: "https://github.com/Harvard-AI-and-Robotics-Lab/FairBenchmarkingFlow",
+    paper: "https://arxiv.org/abs/2603.14186v1"
+  },
+  {
+    id: 2,
+    title: "Adapting Zero-Shot 3D reconstruction Models to Medical Imaging Data",
+    company: "Kempner Institute for the Study of Natural and Artificial Intelligence",
+    companyUrl: "https://kempnerinstitute.harvard.edu/",
+    shortDesc: "AI Researcher",
+    technologies: ["Image-to-3D Generative Models", "Point-Cloud Evaluation Metrics","Medical CT/MRI Imaging","Single-View 3D Reconstruction"],
+    images: ["/images/sam3d1.png", "/images/sam3d2.png", "/images/sam3d3.png"],
+    details: [
+  `Co-first authored a benchmark evaluating zero-shot single-slice-to-3D reconstruction 
+  performance of image-to-3D foundation models across medical CT/MRI and natural object datasets.`,
+
+  `Designed a standardized pipeline extracting masked midpoint slices from volumetric scans 
+  and comparing predicted 3D point clouds against ground-truth anatomical geometry.`,
+
+  `Quantified domain transfer limitations of natural-image geometric priors using surface 
+  distance and voxel-overlap metrics`,
+
+  `Showed that simpler anatomical structures yield stronger coarse shape recovery, while 
+  irregular pathological morphologies exhibit severe reconstruction degradation.`,
+],
+    github: "https://github.com/luoyan407/Benchmark_3D_Generative_Models",
+    paper: "https://arxiv.org/abs/2602.09407"
+  },
+  {
+    id: 3,
+    title: "Robotic Manipulation via World Model Planning",
+    company: "Kempner Institute for the Study of Natural and Artificial Intelligence",
+    companyUrl: "https://kempnerinstitute.harvard.edu/",
+    shortDesc: "AI Researcher",
+    technologies: ["World Models", "Vision-Language-Action Policies","Visual Token Conditioning"],
+    images: ["/images/worldmodel1.png"],
+    details: [
+  `The only undergraduate in my year selected for the 2026 Kempner Undergraduate Research Experience award.`,
+
+  `Developing a hierarchical manipulation framework that leverages a pre-trained world 
+  model to generate high-level task plans as goal image tokens, enabling structured 
+  long-horizon robotic behavior.`,
+  
+  `Extending Vision-Language-Action policy inputs during training`,
+
+  `Currently exploring training-free strategies in policy steering`,
+],
+    github: "Will be released when paper is written",
+   // paper: "https://arxiv.org/abs/2602.09407"
+  },
+  {
+    id: 4,
     title: "Computer Vision and Vision-Action-Language Model for Robotic Arm",
     company: "Momentous Health",
     companyUrl: "https://momentous-health.com/",
@@ -22,7 +94,38 @@ export const projects = [
     video: "https://youtu.be/L8Mwumi1qXs"
   },
   {
-    id: 2,
+    id: 5,
+    title: "Clinical Event Recognition with Vision-Language Models",
+    company: "Momentous Health",
+    companyUrl: "https://momentous-health.com/",
+   // description: "Fine-tuned a vision-language-action model and deployed to a robotic arm",
+    shortDesc: "Robotics & AI Intern",
+    technologies: ["Qwen3-VL",
+    "Multimodal LoRA Fine-Tuning",
+    "Preference Optimization DPO, GRPO",
+    "Prompt Engineering",
+    "Edge AI Deployment",
+    "Jetson Orin Nano",
+    "Synthetic Video Training Pipelines"
+  ],
+    //images: ["/mycobot1.jpg"],
+    details: [
+      `Fine-tuned Qwen3-2B VLM for clinical event recognition from memory-care surveillance 
+      video, targeting safety-critical behaviors such as falls, wandering, and choking.`,
+    `Designed a structured training pipeline combining LoRA-based supervised fine-tuning, 
+    direct preference optimization (DPO), and reinforcement-style policy refinement (GRPO) 
+    with an LLM-critic-in-the-loop evaluation framework.`,
+    `Developed prompt-engineering strategies and taxonomy-constrained chain of thought reasoning to 
+    improve classification reliability in low-quality surveillance footage.`,
+    `Built synthetic-video data generation and data filtering workflows`,
+    `Deploying to Jetson Orin Nano edge device for real-time on-device monitoring.`
+  ],
+    github: "Will be released following product launch",
+    //video: "https://youtu.be/L8Mwumi1qXs"
+  },
+
+  {
+    id: 6,
     title: "Waste Compaction System for Spaceflight ",
     company: "NASA Ames Research Center",
     companyUrl: "https://www.nasa.gov/ames/",
@@ -38,14 +141,49 @@ export const projects = [
     details: [
       "Designed and tested a Pneumatic Mandrel System to simulate spaceflight lateral trash pressure and aid NASA's development of Mechanical Trash Compactor. Determined optimal parameters for microgravity trash compaction.",
       "Created technical engineering drawings, familiarity with GD&T, worked with the machine shop for part manufacturing.",
-      "Presenting as first author at the 2026 International Conference on Environmental Systems."
+      "Presenting as first author at the 2026 International Conference on Environmental Systems.",
+      "Paper will be released following conference presentation."
     ],
   //  github: "https://github.com/yourusername/project1",
   //  demo: "https://demo-link.com",
   //  video: "https://youtube.com/watch?v=your-video-id" // Optional video link
   },
+  {
+  id: 7,
+  title: "AR Soil Analysis and Crop Recommendation System",
+  company: "MIT Reality Hack",
+  companyUrl: "https://www.realityhackatmit.com/",
+  shortDesc: "XR / AI Developer",
+  technologies: [
+    "OpenAI API",
+    "Google Gemini",
+    "Unity",
+    "AR SDK (RayNeo X3 Pro)",
+    "Geospatial APIs (GPS SDK)",
+    "Edge-to-Cloud Integration"
+  ],
+  images: ["/images/mitrealhack.png"],
+  details: [
+    `https://devpost.com/software/farmer-hand`,
+    `Awarded Silver Prize (Best in Hack) and Track Honorable Mention for 
+    developing an AI crop decision-support system, deployed on RayNeo X3 Pro glasses.`,
+    `Built a multimodal pipeline streaming images from AR glasses to OpenAI vision models 
+    for soil feature extraction, with Gemini-based voice interaction for real-time user 
+    feedback.`,
+    `Designed a quantitative soil evaluation framework computing composite metrics 
+    (water retention, drainage, erosion risk) and mapping them to crop-specific suitability
+    scores via weighted optimization.`,
+    `Integrated geospatial data from on-device GPS SDK to enable location-specific recommendations `,
+    `Developed Unity-based visualization to translate model outputs into 
+    simulated crop growth outcomes`,
+    `Worked with real-time image streaming, asynchronous inference, and rendering feedback
+    back onto wearable AR hardware.`
+  ],
+  //github: "",
+  video: "https://youtu.be/km84MQmKFro"
+},
     {
-    id: 3,
+    id: 8,
     title: "Cascading Linear Slide Robot",
     company: "Harvard John A. Paulson School Of Engineering And Applied Sciences",
     companyUrl: "https://seas.harvard.edu/",
@@ -67,7 +205,7 @@ export const projects = [
     video: "https://youtu.be/bGSX6uxILLk" // Optional video link
   },
   {
-    id: 4,
+    id: 9,
     title: "AI Training platform for Disaster Response Volunteers",
     company: "Disaster Tech Lab",
     companyUrl: "https://disastertechlab.org/",
@@ -89,7 +227,7 @@ export const projects = [
     // No video for this project
   },
   {
-    id: 5,
+    id: 10,
     title: "AR Depth-Based Occupancy Mapping and Floor Estimation Project",
    // company: "Disaster Tech Lab",
   //  companyUrl: "https://disastertechlab.org/",
@@ -112,7 +250,7 @@ export const projects = [
     // No video for this project
   },
     {
-    id: 6,
+    id: 11,
     title: "Biodiversity App",
    // company: "Disaster Tech Lab",
    // companyUrl: "https://disastertechlab.org/",
@@ -135,7 +273,7 @@ export const projects = [
     // No video for this project
   },
   {
-    id: 7,
+    id: 12,
     title: "Survival Shooter Game",
   //  company: "Disaster Tech Lab",
    // companyUrl: "https://disastertechlab.org/",
@@ -158,18 +296,4 @@ export const projects = [
     github: "https://github.com/SerenaL1/Survival-Shooter-Game",
     video: "https://youtu.be/LF20n24ZtN8"
   },
-  {
-    id: 8,
-    title: "SheDriveApp",
-    description: "Women-focused ride-sharing application",
-    shortDesc: "Safe ride-sharing for women",
-    technologies: ["Laravel", "PHP", "MySQL", "Flutter"],
-  //  images: ["/project3.jpg"],
-    details: `Developed a ride-sharing application prioritizing safety features for women users.
-    
-Implemented robust backend systems using Laravel and MySQL for reliable service delivery.
-
-Focused on user authentication, real-time tracking, and safety verification systems.`,
-    github: "Coming soon!"
-  }
 ];

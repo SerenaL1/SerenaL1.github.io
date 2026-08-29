@@ -1,3 +1,5 @@
+/* ── existing styles (unchanged) ─────────────────────────────────────── */
+
 .project-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
@@ -71,7 +73,8 @@
 }
 
 /* If only 1 image exists, let it fill */
-.thumb img:only-child {
+.thumb--triptych .thumb__img:only-child,
+.thumb--mosaic .thumb__img--0:only-child {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
 }
@@ -124,4 +127,164 @@
   border-radius: 12px;
   font-size: 0.85rem;
   color: #b8c5ff;
+}
+
+
+/* ── Paper thumbnail layout ───────────────────────────────────────────── */
+
+.thumb--paper {
+  /* override grid — use flex column instead */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f5f4ef;           /* aged paper white */
+  border-radius: 0;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+/* corner fold */
+.paper-fold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #d4d0c5 transparent transparent;
+  z-index: 2;
+}
+
+.paper-fold::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color: #bbb8ae transparent transparent transparent;
+}
+
+/* ── header bar ── */
+.paper-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 6px;
+  background: #e8e4db;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.paper-venue-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #667eea;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.paper-arxiv-id {
+  font-size: 0.6rem;
+  font-family: 'Courier New', monospace;
+  color: #888;
+}
+
+/* ── text-line skeleton helpers ── */
+.paper-line {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.12);
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.paper-line--short    { width: 72%; }
+.paper-line--shorter  { width: 50%; }
+
+/* ── title block ── */
+.paper-title-lines {
+  padding: 8px 12px 4px;
+  flex-shrink: 0;
+}
+
+.paper-line--title {
+  height: 6px;
+  background: rgba(0,0,0,0.22);
+  margin-bottom: 5px;
+}
+
+/* ── author line ── */
+.paper-authors-line {
+  height: 3px;
+  width: 60%;
+  border-radius: 2px;
+  background: rgba(102, 126, 234, 0.4);
+  margin: 0 12px 6px;
+  flex-shrink: 0;
+}
+
+/* ── abstract block ── */
+.paper-abstract {
+  padding: 0 12px 6px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  flex-shrink: 0;
+}
+
+/* ── two-column body ── */
+.paper-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px 12px 8px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.paper-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── hover overlay ── */
+.paper-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(102, 126, 234, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.paper-icon {
+  width: 32px;
+  height: 32px;
+  stroke: #fff;
+}
+
+.project-card:hover .paper-hover-overlay,
+.thumb--paper:hover .paper-hover-overlay {
+  opacity: 1;
 }
