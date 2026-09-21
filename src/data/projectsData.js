@@ -1,5 +1,28 @@
 export const projects = [
   {
+    id: 0,
+    title: "Robotics RL Research Intern",
+    company: "NASA Jet Propulsion Lab",
+    companyUrl: "https://www.jpl.nasa.gov/",
+    description: "Implemented deep RL algorithms for sim-to-online continual learning on physical and simulated robots.",
+    shortDesc: "RL Researcher",
+    technologies: ["reinforcement learning", "docker", "pytorch", "jax"],
+    details: [
+  `Implemented from scratch actor-critic based deep RL algorithms, showed successful sim-to-online
+  continual learning on an 8-DoF physical robot ant and on a simulated electric and hydraulic crane.`,
+
+  `Wrote a new meta-learning-integrated optimizer demonstrated to allow better RL adaptation to changed dynamics`,
+
+  `Presented to DARPA for allowing cranes to move shipments across ships in maritime environments.
+  Will be deployed onto physical electrc crane.`,
+
+  'Mentored by JPL Robotics scientist and Openmind Research Institute scientist under Richard Sutton.',
+],
+    github: "https://github.com/lupusorina/open-ant",
+    videos: ["https://youtu.be/8UR-0n3fTcQ", "https://youtube.com/shorts/2WHoysbOqAE"],
+    paper: "coming soon",
+  },
+  {
     id: 1,
     title: "Analysis and Evaluation of One-Step Generative Models",
     company: "Kempner Institute for the Study of Natural and Artificial Intelligence",

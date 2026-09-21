@@ -7,24 +7,24 @@
 .back-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: rgba(102, 126, 234, 0.2);
+  background: rgba(102, 126, 234, 0.12);
   border: 1px solid rgba(102, 126, 234, 0.5);
   border-radius: 8px;
-  color: #b8c5ff;
+  color: #4a4dc9;
   text-decoration: none;
   margin-bottom: 2rem;
   transition: all 0.3s ease;
 }
 
 .back-button:hover {
-  background: rgba(102, 126, 234, 0.3);
+  background: rgba(102, 126, 234, 0.2);
   transform: translateX(-5px);
 }
 
 .detail-header h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4c50c4 0%, #5c3a91 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -34,23 +34,23 @@
 .company-info {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: #b8c5ff;
+  color: #4a4dc9;
 }
 
 .company-info a {
-  color: #b8c5ff;
+  color: #4a4dc9;
   text-decoration: none;
-  border-bottom: 2px solid rgba(184, 197, 255, 0.3);
+  border-bottom: 2px solid rgba(74, 77, 201, 0.3);
   transition: border-color 0.3s ease;
 }
 
 .company-info a:hover {
-  border-bottom-color: #b8c5ff;
+  border-bottom-color: #4a4dc9;
 }
 
 .detail-description {
   font-size: 1.3rem;
-  color: #cccccc;
+  color: #444444;
   margin-bottom: 2rem;
 }
 
@@ -69,7 +69,7 @@
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(102, 126, 234, 0.25);
-  background: rgba(102, 126, 234, 0.08);
+  background: rgba(102, 126, 234, 0.05);
 }
 
 .detail-gallery-item img {
@@ -94,14 +94,29 @@
 .detail-content h2, .detail-content h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #111111;
 }
 
 .detail-content p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #cccccc;
+  color: #444444;
   margin-bottom: 1.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.75rem;
+  background: rgba(102, 126, 234, 0.12);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #4a4dc9;
 }
 
 .project-links {
@@ -112,16 +127,16 @@
 
 .project-links a {
   padding: 0.75rem 1.5rem;
-  background: rgba(102, 126, 234, 0.2);
+  background: rgba(102, 126, 234, 0.12);
   border: 1px solid rgba(102, 126, 234, 0.5);
   border-radius: 8px;
-  color: #b8c5ff;
+  color: #4a4dc9;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .project-links a:hover {
-  background: rgba(102, 126, 234, 0.3);
+  background: rgba(102, 126, 234, 0.2);
   transform: translateY(-2px);
 }
 
@@ -188,7 +203,7 @@
 .project-details-list {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #cccccc;
+  color: #444444;
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -217,11 +232,29 @@
   border: none;
 }
 
+/* Multiple videos side by side on wider screens */
+.video-container-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.video-container-group .video-container {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .video-container-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Bullet list styling for array-based details */
 .project-details-list {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #cccccc;
+  color: #444444;
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   list-style-type: disc;
@@ -263,27 +296,27 @@
 }
 
 .link-btn--paper {
-  background: #667eea;
+  background: #5257cf;
   color: #fff;
 }
 
 .link-btn--github {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #111111;
 }
 
 .link-btn--video {
-  background: rgba(255, 80, 80, 0.15);
-  border: 1px solid rgba(255, 80, 80, 0.35);
-  color: #ff8080;
+  background: rgba(220, 50, 50, 0.1);
+  border: 1px solid rgba(220, 50, 50, 0.35);
+  color: #c53030;
 }
 
 /* "Coming soon" — not a button, just a muted badge */
 .link-btn--coming-soon {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  color: #888;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  color: #777777;
   cursor: default;
   font-style: italic;
   font-weight: 400;

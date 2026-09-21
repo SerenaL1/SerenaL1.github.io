@@ -5,7 +5,7 @@ import './ProjectDetail.css';
 
 const getYouTubeVideoId = (url) => {
   if (!url) return null;
-  const match = url.match(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/watch\?.+&v=))([^&\n?#]+)/);
+  const match = url.match(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/shorts\/|\/watch\?v=|\/watch\?.+&v=))([^&\n?#]+)/);
   return match ? match[1] : null;
 };
 
@@ -29,8 +29,10 @@ const ProjectDetail = () => {
   }
 
   const videoId = getYouTubeVideoId(project.video);
+  const videoIds = (project.videos ?? []).map(getYouTubeVideoId).filter(Boolean);
   const layoutClass = project.galleryLayout === 'mosaic' ? 'detail-gallery--mosaic' : 'detail-gallery--triptych';
   const githubIsUrl = isRealUrl(project.github);
+  const paperIsUrl = isRealUrl(project.paper);
 
   return (
     <div className="project-detail">
@@ -76,6 +78,22 @@ const ProjectDetail = () => {
         </div>
       )}
 
+      {videoIds.length > 0 && (
+        <div className="video-container-group">
+          {videoIds.map((id, idx) => (
+            <div key={id} className="video-container">
+              <iframe
+                src={`https://www.youtube.com/embed/${id}`}
+                title={`${project.title} video ${idx + 1}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
       <div className="detail-content">
         <h2>About This Project</h2>
         
@@ -97,7 +115,7 @@ const ProjectDetail = () => {
         </div>
 
         <div className="project-links">
-          {project.paper && (
+          {project.paper && paperIsUrl && (
             <a href={project.paper} target="_blank" rel="noopener noreferrer" className="link-btn link-btn--paper">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -105,6 +123,17 @@ const ProjectDetail = () => {
               </svg>
               View Paper on arXiv
             </a>
+          )}
+
+          {project.paper && !paperIsUrl && (
+            <div className="link-btn link-btn--coming-soon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              {project.paper}
+            </div>
           )}
 
           {project.github && githubIsUrl && (
@@ -141,6 +170,15 @@ const ProjectDetail = () => {
               Watch on YouTube
             </a>
           )}
+
+          {(project.videos ?? []).map((v, idx) => (
+            <a key={v} href={v} target="_blank" rel="noopener noreferrer" className="link-btn link-btn--video">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Watch Video {idx + 1}
+            </a>
+          ))}
 
           {project.pdf && (
             <a href={project.pdf} target="_blank" rel="noopener noreferrer" download className="link-btn link-btn--github">

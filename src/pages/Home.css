@@ -1,0 +1,151 @@
+.landing {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.landing-left {
+  flex: 0 0 36%;
+  max-width: 440px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.landing-photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(102, 126, 234, 0.4);
+  margin-bottom: 0.25rem;
+}
+
+.landing-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.landing-tagline {
+  font-size: 0.8rem;
+  color: #4a4dc9;
+  margin: 0 0 0.25rem;
+}
+
+.landing-about {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #444444;
+  margin: 0 0 0.25rem;
+}
+
+.landing-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.landing-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5257cf;
+}
+
+.landing-line {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #444444;
+  margin: 0;
+}
+
+.landing-line strong {
+  color: #4a4dc9;
+  font-weight: 600;
+  margin-right: 0.35em;
+}
+
+.landing-contact {
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.landing-contact a {
+  font-size: 0.75rem;
+  color: #4a4dc9;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.landing-contact a:hover {
+  border-bottom-color: #4a4dc9;
+}
+
+.landing-right {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+}
+
+.landing-current {
+  margin-bottom: 1.25rem;
+}
+
+.landing-current h2 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5257cf;
+  margin-bottom: 0.5rem;
+}
+
+.landing-current-box {
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  background: rgba(102, 126, 234, 0.06);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+}
+
+.landing-current-box p {
+  font-size: 0.78rem;
+  color: #444444;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .landing {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .landing-left {
+    flex: none;
+    max-width: none;
+    height: auto;
+    overflow-y: visible;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .landing-right {
+    height: auto;
+    overflow-y: visible;
+    padding: 1.5rem;
+  }
+}

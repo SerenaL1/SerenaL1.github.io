@@ -6,7 +6,7 @@ import './Projects.css';
 const Projects = () => {
   return (
     <section className="projects">
-      <h2>My Projects</h2>
+      <h2>Research / Projects</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
