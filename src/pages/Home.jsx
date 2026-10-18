@@ -29,8 +29,8 @@ const Home = () => {
           <span className="landing-label">Skills</span>
           <p className="landing-line"><strong>Languages</strong> Python, C/C#, Java, JS/TS, SQL, PHP, HTML/CSS</p>
           <p className="landing-line"><strong>Frameworks</strong> React, Node.js, Flask, Laravel, TensorFlow, PyTorch, OpenCV, pandas, NumPy, Matplotlib, ARKit</p>
-          <p className="landing-line"><strong>Robotics & AI</strong> ROS, Isaac Lab, Computer Vision, YOLO, OpenVLA, Reinforcement Learning, Docker</p>
-          <p className="landing-line"><strong>Design & Mfg</strong> SOLIDWORKS (CSWA), Fusion360, GD&T, CNC Milling, Lathe, 3D Printing, Photolithography</p>
+          <p className="landing-line"><strong>Robotics</strong> ROS, Isaac Lab, Computer Vision, YOLO, OpenVLA, Reinforcement Learning, Docker</p>
+          <p className="landing-line"><strong>Hardware</strong> SOLIDWORKS (CSWA), Fusion360, GD&T, CNC Milling, Lathe, 3D Printing, Photolithography</p>
         </div>
 
         <div className="landing-contact">
@@ -52,9 +52,9 @@ const Home = () => {
           <p>MIT Reality Hack Best in Hack 2nd Place</p>
         </section>
 
-        <Projects />
-
         <Publications />
+
+        <Projects />
       </main>
     </div>
   );
