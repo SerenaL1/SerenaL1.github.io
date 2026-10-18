@@ -13,14 +13,38 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.65rem;
-  max-width: 66.6%;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  max-width: 100%;
+  max-height: 240px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 0.6rem 0.75rem 0.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(102, 126, 234, 0.4) transparent;
+}
+
+.projects-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.4);
+  border-radius: 3px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 126, 234, 0.6);
 }
 
 @media (max-width: 600px) {
   .projects-grid {
-    grid-template-columns: 1fr;
-    max-width: none;
+    max-height: 280px;
   }
 }

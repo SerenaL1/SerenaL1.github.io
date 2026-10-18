@@ -1,10 +1,10 @@
 export const projects = [
   {
     id: 0,
-    title: "Robotics RL Research Intern",
+    title: "Robotics RL Research",
     company: "NASA Jet Propulsion Lab",
     companyUrl: "https://www.jpl.nasa.gov/",
-    description: "Implemented deep RL algorithms for sim-to-online continual learning on physical and simulated robots.",
+    description: "Implemented deep RL for continual learning on physical robots.",
     shortDesc: "RL Researcher",
     technologies: ["reinforcement learning", "docker", "pytorch", "jax"],
     details: [
@@ -24,7 +24,7 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Analysis and Evaluation of One-Step Generative Models",
+    title: "Metric Development for One-Step Generative Models",
     company: "Kempner Institute for the Study of Natural and Artificial Intelligence",
     companyUrl: "https://kempnerinstitute.harvard.edu/",
    // description: "Fine-tuned a vision-language-action model and deployed to a robotic arm",
@@ -73,30 +73,8 @@ export const projects = [
     paper: "https://arxiv.org/abs/2602.09407"
   },
   {
-    id: 3,
-    title: "Robotic Manipulation via World Model Planning",
-    company: "Kempner Institute for the Study of Natural and Artificial Intelligence",
-    companyUrl: "https://kempnerinstitute.harvard.edu/",
-    shortDesc: "AI Researcher",
-    technologies: ["World Models", "Vision-Language-Action Policies","Visual Token Conditioning"],
-    images: ["/images/worldmodel1.png"],
-    details: [
-  `The only undergraduate in my year selected for the 2026 Kempner Undergraduate Research Experience award.`,
-
-  `Developing a hierarchical manipulation framework that leverages a pre-trained world 
-  model to generate high-level task plans as goal image tokens, enabling structured 
-  long-horizon robotic behavior.`,
-  
-  `Extending Vision-Language-Action policy inputs during training`,
-
-  `Currently exploring training-free strategies in policy steering`,
-],
-    github: "Will be released when paper is written",
-   // paper: "https://arxiv.org/abs/2602.09407"
-  },
-  {
     id: 4,
-    title: "Computer Vision and Vision-Action-Language Model for Robotic Arm",
+    title: "Computer Vision for Robotic Arm",
     company: "Momentous Health",
     companyUrl: "https://momentous-health.com/",
    // description: "Fine-tuned a vision-language-action model and deployed to a robotic arm",
@@ -118,7 +96,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Clinical Event Recognition with Vision-Language Models",
+    title: "VLM Fine-Tuning for Clinical Event Recognition",
     company: "Momentous Health",
     companyUrl: "https://momentous-health.com/",
    // description: "Fine-tuned a vision-language-action model and deployed to a robotic arm",
@@ -149,7 +127,7 @@ export const projects = [
 
   {
     id: 6,
-    title: "Waste Compaction System for Spaceflight ",
+    title: "Waste Compaction System Design for Spaceflight ",
     company: "NASA Ames Research Center",
     companyUrl: "https://www.nasa.gov/ames/",
   // description: "Waste management for space missions",
@@ -173,7 +151,7 @@ export const projects = [
   },
   {
   id: 7,
-  title: "AR Soil Analysis and Crop Recommendation System",
+  title: "AR Soil Analysis System",
   company: "MIT Reality Hack",
   companyUrl: "https://www.realityhackatmit.com/",
   shortDesc: "XR / AI Developer",
@@ -227,28 +205,28 @@ export const projects = [
     ],
     video: "https://youtu.be/bGSX6uxILLk" // Optional video link
   },
-  {
-    id: 9,
-    title: "AI Training platform for Disaster Response Volunteers",
-    company: "Disaster Tech Lab",
-    companyUrl: "https://disastertechlab.org/",
-   // description: "AI training platform for disaster response",
-    shortDesc: "Disaster Tech Lab Software Engineer",
-    technologies: ["FastAPI", "React", "AI"],
-    images: [
-      "/images/disastertech1.png",
-      "/images/disastertech2.png",
-      "/images/disastertech3.png",
-    ],
-    galleryLayout: "mosaic",
-    details: [
-      "Built an AI-powered training platform for disaster response volunteers at the Disaster Tech Lab.",
-      "Developed CRUD APIs and scenario management systems to streamline volunteer training processes.",
-      "Integrated real-time feedback mechanisms to improve training effectiveness.",
-    ],
-    github: "https://github.com/SerenaL1/Disaster-Tech-Lab-Training-Platform"
-    // No video for this project
-  },
+  // {
+  //   id: 9,
+  //   title: "AI Training platform for Disaster Response Volunteers",
+  //   company: "Disaster Tech Lab",
+  //   companyUrl: "https://disastertechlab.org/",
+  //  // description: "AI training platform for disaster response",
+  //   shortDesc: "Disaster Tech Lab Software Engineer",
+  //   technologies: ["FastAPI", "React", "AI"],
+  //   images: [
+  //     "/images/disastertech1.png",
+  //     "/images/disastertech2.png",
+  //     "/images/disastertech3.png",
+  //   ],
+  //   galleryLayout: "mosaic",
+  //   details: [
+  //     "Built an AI-powered training platform for disaster response volunteers at the Disaster Tech Lab.",
+  //     "Developed CRUD APIs and scenario management systems to streamline volunteer training processes.",
+  //     "Integrated real-time feedback mechanisms to improve training effectiveness.",
+  //   ],
+  //   github: "https://github.com/SerenaL1/Disaster-Tech-Lab-Training-Platform"
+  //   // No video for this project
+  // },
   {
     id: 10,
     title: "AR Depth-Based Occupancy Mapping and Floor Estimation Project",
@@ -272,51 +250,51 @@ export const projects = [
     github: "https://github.com/SerenaL1/Navigation-and-Object-Location"
     // No video for this project
   },
-    {
-    id: 11,
-    title: "Biodiversity App",
-   // company: "Disaster Tech Lab",
-   // companyUrl: "https://disastertechlab.org/",
-    description: "Biodiversity App with Species chatbot, wikipedia queries",
-    shortDesc: "App Creator",
-    technologies: ["FastAPI", "React", "LLM"],
-    images: [
-      "/images/T4SG1.png",
-      "/images/T4SG2.png",
-      "/images/T4SG3.png",
-    ],
-    galleryLayout: "mosaic",
-    details: [
-      "Built a full-stack species logging platform using Next.js (App Router) + React + TypeScript with a Supabase (Postgres) backend, implementing end-to-end CRUD flows",
-      "Developed a Species chatbot by implementing an API route + service layer for LLM responses with input validation, error handling, and guardrails to keep responses species-focused",
-      "Implemented Wikipedia-based autofill for species creation (REST calls, async state, toast-based error feedback)",
-      "Added author-only editing and deletion for species entries with frontend gating using session identity, backed by Supabase policies; integrated form validation with React Hook Form + Zod"
-    ],
-    github: "https://github.com/SerenaL1/f25-eng-r2-deliverable"
-    // No video for this project
-  },
-  {
-    id: 12,
-    title: "Survival Shooter Game",
-  //  company: "Disaster Tech Lab",
-   // companyUrl: "https://disastertechlab.org/",
-    description: "A 2D survival shooter built in Python/Pygame featuring map-driven world loading, wave-based enemy scaling, mouse-aimed combat, and a custom camera + collision system.",
-    shortDesc: "Game Developer",
-    technologies: ["Python", "Pygame", "Vector Math","Sprite Systems", "Object-Oriented Design", "Collision handling"],
-    images: [
-      "/images/survivor1.png",
-      "/images/survivor2.png",
-      "/images/survivor3.png",
-    ],
-    galleryLayout: "mosaic",
-    details: [
-      "Built a 2D survival shooter in Python + Pygame with a modular architecture (game loop, entity sprites, UI screens, camera group) and an external tilemap pipeline using Tiled TMX via pytmx",
-      "Built a responsive combat system with Mouse-aimed rotating gun anchored using vector math, sprites lifecycle management (spawn offset, velocity integration with dt, time-based despawn) and collision resolution",
-      "Implemented a wave-based difficulty system with kill tracking, increasing enemies-per-wave",
-      "Built health + damage mechanics with invincibility frames",
-      "Implemented a camera + render-sorting system using a custom sprite group that offsets world coordinates around the player and draws sprites in depth order"
-    ],
-    github: "https://github.com/SerenaL1/Survival-Shooter-Game",
-    video: "https://youtu.be/LF20n24ZtN8"
-  },
+  //   {
+  //   id: 11,
+  //   title: "Biodiversity App",
+  //  // company: "Disaster Tech Lab",
+  //  // companyUrl: "https://disastertechlab.org/",
+  //   description: "Biodiversity App with Species chatbot, wikipedia queries",
+  //   shortDesc: "App Creator",
+  //   technologies: ["FastAPI", "React", "LLM"],
+  //   images: [
+  //     "/images/T4SG1.png",
+  //     "/images/T4SG2.png",
+  //     "/images/T4SG3.png",
+  //   ],
+  //   galleryLayout: "mosaic",
+  //   details: [
+  //     "Built a full-stack species logging platform using Next.js (App Router) + React + TypeScript with a Supabase (Postgres) backend, implementing end-to-end CRUD flows",
+  //     "Developed a Species chatbot by implementing an API route + service layer for LLM responses with input validation, error handling, and guardrails to keep responses species-focused",
+  //     "Implemented Wikipedia-based autofill for species creation (REST calls, async state, toast-based error feedback)",
+  //     "Added author-only editing and deletion for species entries with frontend gating using session identity, backed by Supabase policies; integrated form validation with React Hook Form + Zod"
+  //   ],
+  //   github: "https://github.com/SerenaL1/f25-eng-r2-deliverable"
+  //   // No video for this project
+  // },
+  // {
+  //   id: 12,
+  //   title: "Survival Shooter Game",
+  // //  company: "Disaster Tech Lab",
+  //  // companyUrl: "https://disastertechlab.org/",
+  //   description: "A 2D survival shooter built in Python/Pygame featuring map-driven world loading, wave-based enemy scaling, mouse-aimed combat, and a custom camera + collision system.",
+  //   shortDesc: "Game Developer",
+  //   technologies: ["Python", "Pygame", "Vector Math","Sprite Systems", "Object-Oriented Design", "Collision handling"],
+  //   images: [
+  //     "/images/survivor1.png",
+  //     "/images/survivor2.png",
+  //     "/images/survivor3.png",
+  //   ],
+  //   galleryLayout: "mosaic",
+  //   details: [
+  //     "Built a 2D survival shooter in Python + Pygame with a modular architecture (game loop, entity sprites, UI screens, camera group) and an external tilemap pipeline using Tiled TMX via pytmx",
+  //     "Built a responsive combat system with Mouse-aimed rotating gun anchored using vector math, sprites lifecycle management (spawn offset, velocity integration with dt, time-based despawn) and collision resolution",
+  //     "Implemented a wave-based difficulty system with kill tracking, increasing enemies-per-wave",
+  //     "Built health + damage mechanics with invincibility frames",
+  //     "Implemented a camera + render-sorting system using a custom sprite group that offsets world coordinates around the player and draws sprites in depth order"
+  //   ],
+  //   github: "https://github.com/SerenaL1/Survival-Shooter-Game",
+  //   video: "https://youtu.be/LF20n24ZtN8"
+  // },
 ];

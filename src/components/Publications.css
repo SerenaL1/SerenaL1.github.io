@@ -1,0 +1,150 @@
+.publications {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.publications h2 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: #5257cf;
+}
+
+.publications-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.publication-item {
+  background: rgba(0, 0, 0, 0.015);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.publication-item:hover {
+  border-color: rgba(102, 126, 234, 0.6);
+  background: rgba(102, 126, 234, 0.06);
+}
+
+.publication-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #111111;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+}
+
+.publication-title:hover {
+  color: #4a4dc9;
+  text-decoration: underline;
+}
+
+.publication-title--no-link {
+  cursor: default;
+}
+
+.publication-title--no-link:hover {
+  color: #111111;
+  text-decoration: none;
+}
+
+.publication-authors {
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: #555555;
+  margin: 0 0 0.25rem;
+}
+
+.publication-authors--pending {
+  font-style: italic;
+  color: #999999;
+}
+
+.publication-author.is-me {
+  font-weight: 700;
+  color: #4a4dc9;
+}
+
+.publication-affiliation-mark {
+  color: #8a8dd9;
+  margin-left: 0.05em;
+}
+
+.publication-affiliations {
+  font-size: 0.6rem;
+  line-height: 1.6;
+  color: #999999;
+  margin: 0 0 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.6rem;
+}
+
+.publication-affiliations a {
+  color: #999999;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.publication-affiliations a:hover {
+  color: #4a4dc9;
+  border-bottom-color: #4a4dc9;
+}
+
+.publication-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.publication-venue {
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: #4a4dc9;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.publication-venue--pending {
+  color: #999999;
+  background: rgba(0, 0, 0, 0.05);
+  font-style: italic;
+}
+
+.publication-links {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.publication-link {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #4a4dc9;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.publication-link:hover {
+  border-bottom-color: #4a4dc9;
+}
+
+@media (max-width: 600px) {
+  .publication-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Projects from '../components/Projects';
+import Publications from '../components/Publications';
 import './Home.css';
 
 const Home = () => {
@@ -43,12 +44,18 @@ const Home = () => {
       <main className="landing-right">
         <section className="landing-current">
           <h2>Current</h2>
-          <div className="landing-current-box">
-            <p>Currently a Research Intern at JPL.</p>
-          </div>
+          <p>Reinforcement Learning Research Intern at NASA Jet Propulsion Labs.</p>
+        </section>
+
+        <section className="landing-current">
+          <h2>Awards</h2>
+          <p>ICML Fogen Workshop Spotlight Paper</p>
+          <p>MIT Reality Hack Best in Hack 2nd Place</p>
         </section>
 
         <Projects />
+
+        <Publications />
       </main>
     </div>
   );

@@ -114,17 +114,10 @@
   margin-bottom: 0.5rem;
 }
 
-.landing-current-box {
-  border: 1px solid rgba(102, 126, 234, 0.3);
-  background: rgba(102, 126, 234, 0.06);
-  border-radius: 8px;
-  padding: 0.6rem 0.85rem;
-}
-
-.landing-current-box p {
+.landing-current p {
   font-size: 0.78rem;
   color: #444444;
-  margin: 0;
+  margin: 0 0 0.2rem;
 }
 
 @media (max-width: 860px) {
