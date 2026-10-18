@@ -14,7 +14,7 @@ const Home = () => {
         </p>
 
         <p className="landing-about">
-          I'm interested in reinforcement learning on robotic hardware. Currently exploring 
+          I'm interested in reinforcement learning theory and control theory. Currently exploring 
           robust algorithms to allow lifelong learning.
         </p>
 
@@ -30,8 +30,7 @@ const Home = () => {
           <p className="landing-line"><strong>Languages</strong> Python, C/C#, Java, JS/TS, SQL, PHP, HTML/CSS</p>
           <p className="landing-line"><strong>Frameworks</strong> React, Node.js, Flask, Laravel, TensorFlow, PyTorch, OpenCV, pandas, NumPy, Matplotlib, ARKit</p>
           <p className="landing-line"><strong>Robotics & AI</strong> ROS, Isaac Lab, Computer Vision, YOLO, OpenVLA, Reinforcement Learning, Docker</p>
-          <p className="landing-line"><strong>Design & Mfg</strong> SOLIDWORKS (CSWA), AutoCAD, Fusion360, GD&T, CNC Milling, Lathe, 3D Printing, Photolithography</p>
-          <p className="landing-line"><strong>Computational</strong> LabVIEW, PCA, Time-series Analysis, Regression, Monte Carlo, ANOVA</p>
+          <p className="landing-line"><strong>Design & Mfg</strong> SOLIDWORKS (CSWA), Fusion360, GD&T, CNC Milling, Lathe, 3D Printing, Photolithography</p>
         </div>
 
         <div className="landing-contact">
